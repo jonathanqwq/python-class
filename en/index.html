@@ -16,6 +16,22 @@
 	  coverpage: true,
 	  loadSidebar: true,
 	  loadNavbar: true,
+	  plugins: [
+    function(hook) {
+      var footer = [
+        '<hr/>',
+        '<footer>',
+        '<span>Powered by docsify</span><br>',
+        '<span>Copyright © 2019-2020 Jonathan Shi All rights reserved. <span>',
+        '</footer>'
+      ].join('');
+
+      hook.afterEach(function(html) {
+        return html + footer;
+      });
+    }
+	
+  ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
