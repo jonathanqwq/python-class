@@ -23,18 +23,19 @@
 ```git clone https://github.com/jonathanqwq/python-class.git```
 由于数据量较大，请稍等一会儿。可能需要一段时间。
 
-完成后，先执行执行```git init```，正常后执行```git remote -v```，确认回显文字。如果自动添加正常的话，应当显示如此：  
+完成后，执行```git remote -v```，确认回显文字。如果自动添加正常的话，应当显示如此：  
 ```origin https://github.com/jonathanqwq/python-class.git (fetch)```  
 ```origin https://github.com/jonathanqwq/python-class.git (push)```  
 如果没有显示，则需要手动添加远程站点。执行以下指令。  
 ```git remote add origin https://github.com/jonathanqwq/python-class.git```  
-完成之后再次执行git remote -v，此时应当出现正常的远程站点信息显示。
+```git init```，
+完成之后再次执行```git remote -v```，此时应当出现正常的远程站点信息显示。
 
 好的，设定完成。已与远程代码库建立联系。
 
 接下来输入以下三条指令。每条指令复制粘贴更改后回车。  
-```git config --global user.email "更换为您注册的Email，不要去掉引号"  
-git config --global user.name "更换为您注册的用户名，不要去掉引号"```  
+```git config --global user.email "更换为您注册的Email，不要去掉引号"```
+```git config --global user.name "更换为您注册的用户名，不要去掉引号"```  
 
 进入python-class文件夹，打开右键菜单并选择Git GUI Here。  
 为方便我们之后的操作，请选择顶部菜单中的Tools -> Add，并在对话框中填写如下内容。Name一栏可随便。之后点击Add。  
@@ -55,7 +56,7 @@ git config --global user.name "更换为您注册的用户名，不要去掉引�
 可能会让你登录github,直接登陆即可。
 
 有时点击Push时候会失败，并弹出一个对话框，里面含有fast-forward字样。  
-这是因为在您上次提交之后至这次提交之前，其他成员也修改了在线文档，使得您本地的代码和在线的代码不同步了。遇到这个情况，点击Tools菜单中您在第7步添加的列表项，即可拉取在线代码的更新到本地。然后您就可以再次点击Push了。
+这是因为在您上次提交之后至这次提交之前，其他成员也修改了在线文档，使得您本地的代码和在线的代码不同步了。遇到这个情况，点击Tools菜单中添加的列表项，即可拉取在线代码的更新到本地。然后您就可以再次点击Push了。
 
 事实上，我们建议您每天开工前都执行一下拉取操作，来保持时刻同步。  
 在最糟糕的情况下，点击拉取时也会报错，报出的错误中含有CONFLICT字样，这表明您和另一位“撞车”了——同时往不同方向翻译了同一篇文档。点击确定后，软件将自动显示出含有冲突的文档，以及两方不同修改方向的修改内容。

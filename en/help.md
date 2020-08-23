@@ -18,16 +18,17 @@ A command line window will pop up. Wait for the program initialization to comple
 Press enter after copying and pasting each instruction.  
 ```git clone https://github.com/jonathanqwq/python-class.git```  
 Due to the large amount of data, please wait a moment. It may take a while.  
-After completion, execute ```git init```, and execute ```git remote -v```, and confirm that the text is echoed. If automatic addition is normal, it should be displayed as follows:  
+After completion,execute ```git remote -v```, and confirm that the text is echoed. If automatic addition is normal, it should be displayed as follows:  
 ```origin https://github.com/jonathanqwq/python-class.git  (fetch)```  
 ```origin https://github.com/jonathanqwq/python-class.git  (push)```  
 If not, you need to add the remote site manually. Execute the following instructions.  
-```git remote add origin https://github.com/jonathanqwq/python-class.git```  
+```git remote add origin https://github.com/jonathanqwq/python-class.git``` 
+```git init``` 
 After that, execute ```git remote -v``` again, and the normal remote site information display should appear.  
 OK, the setup is complete. Contact has been established with the remote code base.  
 Next, enter the following three instructions. Press enter after copying and pasting each instruction.  
-```git config --global  user.email  "Change to your registered email, do not remove the quotation marks"  
-git config --global  user.name  "Change to your registered user name, do not remove the quotation marks"```  
+```git config --global  user.email  "Change to your registered email, do not remove the quotation marks" ``` 
+```git config --global  user.name  "Change to your registered user name, do not remove the quotation marks"```  
 Go to the python class folder, open the right-click menu and select git GUI here.  
 To facilitate our later operations, please select Tools > add in the top menu and fill in the following contents in the dialog box. The name column is optional. Then click Add.  
 Select Edit > Options in the top menu, click the two buttons shown in the figure, and select Unicode (utf8) in the pop-up drop-down box. This will solve the problem of garbled Chinese.  
