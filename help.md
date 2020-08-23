@@ -28,13 +28,13 @@
 ```origin https://github.com/jonathanqwq/python-class.git (push)```  
 如果没有显示，则需要手动添加远程站点。执行以下指令。  
 ```git remote add origin https://github.com/jonathanqwq/python-class.git```  
-```git init```，
+```git init```  
 完成之后再次执行```git remote -v```，此时应当出现正常的远程站点信息显示。
 
 好的，设定完成。已与远程代码库建立联系。
 
-接下来输入以下三条指令。每条指令复制粘贴更改后回车。  
-```git config --global user.email "更换为您注册的Email，不要去掉引号"```
+接下来输入以下两条指令。每条指令复制粘贴更改后回车。  
+```git config --global user.email "更换为您注册的Email，不要去掉引号"```  
 ```git config --global user.name "更换为您注册的用户名，不要去掉引号"```  
 
 进入python-class文件夹，打开右键菜单并选择Git GUI Here。  

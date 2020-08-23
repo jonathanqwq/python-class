@@ -22,11 +22,11 @@ After completion,execute ```git remote -v```, and confirm that the text is echoe
 ```origin https://github.com/jonathanqwq/python-class.git  (fetch)```  
 ```origin https://github.com/jonathanqwq/python-class.git  (push)```  
 If not, you need to add the remote site manually. Execute the following instructions.  
-```git remote add origin https://github.com/jonathanqwq/python-class.git``` 
-```git init``` 
+```git remote add origin https://github.com/jonathanqwq/python-class.git```  
+```git init```   
 After that, execute ```git remote -v``` again, and the normal remote site information display should appear.  
 OK, the setup is complete. Contact has been established with the remote code base.  
-Next, enter the following three instructions. Press enter after copying and pasting each instruction.  
+Next, enter the following two instructions. Press enter after copying and pasting each instruction.  
 ```git config --global  user.email  "Change to your registered email, do not remove the quotation marks" ``` 
 ```git config --global  user.name  "Change to your registered user name, do not remove the quotation marks"```  
 Go to the python class folder, open the right-click menu and select git GUI here.  
