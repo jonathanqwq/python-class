@@ -68,7 +68,7 @@
 为了尽量避免撞车，项目组使用邮箱进行任务分配。
 未收到任务的成员请勿自行更改文档，否则将被移出编写组。
 
-第二种加入方法：（可能出现问题）
+第二种加入方法：（可能出现问题）  
 如果您没有安装Git客户端，请前往git官网下载并安装官方Git客户端。 
  如果您没有github账号，请前往github官网 注册一个。
 
@@ -79,10 +79,68 @@
 使用指南
 本工具安装过程包括多个步骤，但并不特别复杂。
 
-安装 Installation
-点击 [此处](https://github.com/zbx1425/paGit/archive/master.zip) 下载本工具。
-解压pagit.sh到你的电脑, 放到一个风水宝地。
-打开右键菜单并选择Git Bash Here。  
+找一个位置方便的空文件夹用来保存网站的所有文件。您将在这里离线开工。  
+新建文本文档，重命名为pagit.sh（注意后缀！），放入下方代码  
+```pagit.sh 此工具由zbx1425编写，jonathanqwq修改。
+#!/bin/bash
+
+# 配置 / Configuration
+
+# 您的Email / Your Email  
+GIT_EMAIL="somebody@somewhere.com"
+
+# 您的英文名 / Your Name  
+GIT_UNAME="somebody"
+ 
+HTTPS_PROVIDER="https://github.com/jonathanqwq/python-class.git"
+
+# 您的github/gitee注册时使用的邮箱 / Your github/gitee Email address for registration  
+HTTPS_USERNAME="somebody"
+
+# 您的github/gitee密码 / Your github/gitee password  
+HTTPS_PASSWORD="somebody"
+
+
+
+COMMIT_MSG="使用pagit上传"  
+HTTPS_USERNAME=$(echo $HTTPS_USERNAME | tr -d '\n' | xxd -plain | sed 's/\(..\)/%\1/g')  
+HTTPS_PASSWORD=$(echo $HTTPS_PASSWORD | tr -d '\n' | xxd -plain | sed 's/\(..\)/%\1/g')  
+HTTPS_PROVIDER=$(echo $HTTPS_PROVIDER | sed s#://#://$HTTPS_USERNAME:$HTTPS_PASSWORD@#)  
+echo $HTTPS_PROVIDER  
+if [ ! -d .git ]; then  
+	git init  
+	git config user.name $GIT_UNAME  
+	git config user.email $GIT_EMAIL  
+fi  
+if [ -z $(git remote) ]; then  
+	git remote add origin $HTTPS_PROVIDER  
+fi  
+pmg=$(git pull --set-upstream origin master 2>&1); pst=$?  
+echo $pmg | grep "couldn't find remote ref master" >/dev/null; echo $pmg  
+if [ $pst != 0 -a $? != 0 ]; then  
+	echo -e "\033[31m 发生合并冲突. 请手动解决! \033[0m"  
+	echo -e "\033[31m Merge conflict. Please resolve it manually! \033[0m"  
+	exit  
+fi  
+grep "pagit.sh" .gitignore >/dev/null  
+if [ $? != 0 ]; then echo "pagit.sh" >>.gitignore; fi  
+git add .  
+if git commit -m "$COMMIT_MSG"; then  
+	git push origin master  
+	echo -e "\033[32m 上传完成. 谢谢! \033[0m"  
+	echo -e "\033[32m Commit succeed. Thank you! \033[0m"  
+	if echo $HTTPS_PROVIDER | grep "gitee.com" >/dev/null; then  
+		echo -e "\033[33m 上传完成.如果您使用此工具修改码云pages文件，请勿忘记在码云网站上手动更新Pages. \033[0m"  
+		echo -e "\033[33m Upload completed. If you use this tool to modify the pages file, please do not forget to manually update pages on code cloud website \033[0m"  
+	fi  
+else  
+	echo -e "\033[33m 没有文件变动. \033[0m"  
+	echo -e "\033[33m No file was updated. \033[0m"  
+fi  
+if [ $# == 0 ]; then read -n 1; fi
+```
+
+关闭编辑界面，在文件夹中打开右键菜单，并选择Git Bash Here。  
 将弹出一个命令行窗口。等待程序初始化完成，在窗口中打出一行以 $ 结尾的文字时，输入以下指令。  
 每条指令复制粘贴更改后回车。  
 ```git clone https://github.com/jonathanqwq/python-class.git```
