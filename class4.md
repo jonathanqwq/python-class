@@ -26,4 +26,4 @@
 
 注：下节课我们教变量哦
 
-[ENGLISH](https://translate.google.com/translate?sl=zh-CN&tl=en&u=https://jonathanqwq.github.io/python-class/#/class4)
+[ENGLISH](https://translate.google.com/translate?hl=&sl=zh-CN&tl=en&u=https%3A%2F%2Fjonathanqwq.github.io%2Fpython-class%2F%23%2Fclass4&sandbox=1)
