@@ -28,8 +28,8 @@
 ```origin https://github.com/jonathanqwq/python-class.git (fetch)```  
 ```origin https://github.com/jonathanqwq/python-class.git (push)```  
 如果没有显示，则需要手动添加远程站点。执行以下指令。  
+```git init``` 
 ```git remote add origin https://github.com/jonathanqwq/python-class.git```  
-```git init```  
 完成之后再次执行```git remote -v```，此时应当出现正常的远程站点信息显示。
 
 好的，设定完成。已与远程代码库建立联系。
