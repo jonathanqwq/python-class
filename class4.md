@@ -1,4 +1,4 @@
-# Python3的介绍＋入门--第二讲：input
+# Python3的介绍＋入门--第三讲：input
 
 > 欢迎您，尊敬的python开发者！
 

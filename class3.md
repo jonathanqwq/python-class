@@ -1,4 +1,4 @@
-# Python3的介绍＋入门--第一讲：print
+# Python3的介绍＋入门--第二讲：print
 
 > 欢迎您，尊敬的python开发者！
 

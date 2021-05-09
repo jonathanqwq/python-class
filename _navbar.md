@@ -1,1 +1,1 @@
-* [:uk: english](https://jonathanqwq.github.io/python-class/en/)
+* [首页](https://jonathanqwq.github.io/)

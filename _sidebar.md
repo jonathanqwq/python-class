@@ -2,6 +2,7 @@
     * [写在前面](README.md)
 	* [开发环境准备](guide.md)
 * 学习
+	* [字符类型](class2.md)
 	* [print](class3.md)
 	* [input](class4.md)
 	* [变量，错误](class5.md)
