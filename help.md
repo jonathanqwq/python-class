@@ -9,6 +9,7 @@
 第一种加入方法：（推荐）  
 请查看视频教程，下方文字内容有误！  
 <iframe scrolling="no" style="position:relative; height:800px; width:360px; top:0px; border-width:0px" src="//player.bilibili.com/player.html?aid=930475825&bvid=BV1EK4y1d7Nj&cid=335584680&page=1"></iframe>
+__请先安装git！__  
 由于本项目使用github进行代码托管和版本管理，您需要使用git工具来和我们保持同步。  
 如果您没有安装Git客户端，请前往git官网下载并安装官方Git客户端。  
 如果您没有github账号，请前往github官网 注册一个。
