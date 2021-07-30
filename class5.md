@@ -19,7 +19,6 @@
 
 Python允许你同时为多个变量赋值。例如：
 ```python
-	python
 	a = b = c = "1"
 ```
 以上实例，创建一个字符串对象，值为 1，从后向前赋值，三个变量被赋予相同的数值。
@@ -41,3 +40,6 @@ NameError: name 'jonathanqwq' is not defined
 
 ### TypeError（类型错误）
 TypeError 也是一种经常出现的异常。当操作或函数应用于不适当类型的对象时引发，一个常见的例子是对整数和字符串做加法。
+
+
+注：下节课我们教列表
