@@ -1,8 +1,9 @@
 # pyclass 
 
-> 一个学习python的网站。
+> 一个学习编程的网站。
 
-- 学起来轻松，简单。
+- 同时有python和c++教程哦。
 
 [本人的GitHub](https://github.com/jonathanqwq )
 [开始学习](README)
+
